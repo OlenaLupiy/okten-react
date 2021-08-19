@@ -1,13 +1,17 @@
 import './App.css';
 import Form from "./components/Form";
-import SuperForm from "./components/SuperForm";
+import Cars from "./components/Cars";
+// import CarDelete from "./components/CarDelete";
+// import Car from "./components/Car";
+// import Cars from "./components/Cars";
 
 
 function App() {
     return (
         <div className="App">
-            {/*<SuperForm/>*/}
-            <Form/>
+            {/*<CarDelete/>*/}
+            {/*<Form/>*/}
+           <Cars/>
         </div>
     );
 }
