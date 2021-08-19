@@ -1,5 +1,4 @@
 const saveCar = (car)=>{
-
      return fetch('http://195.72.146.25//api/v1/cars', {
         method: 'POST',
         body: JSON.stringify(car),
@@ -18,12 +17,19 @@ const getCar = ()=>{
 
 const deleteCarAPI = (id)=>{
      return fetch(`http://195.72.146.25//api/v1/cars/` + id, {
-        method: `DELETE`,
+        method: `DELETE`
+    })
+}
+
+const editCarAPI = (car, id) => {
+    return fetch('http://195.72.146.25//api/v1/cars/' + id, {
+        method: 'PUT',
+        body: JSON.stringify(car),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
-        },
+        }
     })
 }
 
 
-export {saveCar, getCar, deleteCarAPI}
+export {saveCar, getCar, deleteCarAPI, editCarAPI}
