@@ -10,25 +10,36 @@ export default function Form() {
 
 
 
-    const onSubmitForm = (e) => {
-        e.preventDefault()
-        setCar({...car})
-        saveCar(car)
-    };
+const onSubmitForm = (e)=>{
+        e.preventDefault();
+
+        let carSave = {id, model, price, year}
+    setCar({...carSave});
+       saveCar(carSave)
+        }
+
 
     const onCarIdChange = (e) => {
-        setId(e.target.value)
+    let id = e.target.value
+        setId(id);
+
     };
     const onCarModelChange = (e) => {
-        setModel(e.target.value)
+        let model = e.target.value
+        setModel(model);
+
     };
 
     const onCarPriceChange = (e) => {
-        setPrice(e.target.value)
+        let price = e.target.value
+        setPrice(price);
+
     };
 
     const onCarYearChange = (e) => {
-        setYear(e.target.value)
+        let year = e.target.value;
+        setYear(year);
+
     };
 
 
@@ -43,6 +54,7 @@ export default function Form() {
                 <input type="number" name={'year'} value={year} onChange={onCarYearChange} placeholder={'enter year'}/>
                 <button>Save</button>
             </form>
+            <div>{JSON.stringify(car)}</div>
         </div>
     )
 }
